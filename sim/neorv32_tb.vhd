@@ -324,7 +324,7 @@ begin
     impure function uart0_expectation return string is
     begin
       if ci_mode then
-        return nul & nul & cr & lf & "<< PROCESSOR CHECK >>" & cr & lf & "build: ";
+        return nul & nul & cr & lf & cr & lf & "Test results:" & cr & lf & "OK:     44/44" & cr & lf & "FAILED: 0/44" & cr & lf & cr & lf & etx;
       else
         return "Blinking LED demo program" & cr & lf & etx;
       end if;
